@@ -23,7 +23,6 @@ checkbtn.addEventListener("click", function () {
     if (!guessValue) {
       changeMessageText("No Number!");
     } else if (guessValue === secretNumber) {
-      //when win
       body.classList.remove("bg-slate-600");
       body.classList.add("bg-green-600");
       numberBox.classList.remove("px-10");
