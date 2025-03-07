@@ -3,12 +3,50 @@
 
 <head>
   <meta charset="UTF-8">
+  <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../dist/output.css" rel="stylesheet">
 </head>
 
-<body class="container mx-auto">
-  <h1 class="taxt">guess the number</h1>
+<body class="text-white font-pixely  bg-slate-600">
+  <main class=" h-screen py-8">
+    <section class="">
+      <h1 class=" drop-shadow-xl text-6xl text-center capitalize ">guess the number!</h1>
+      <p class="drop-shadow-xl x pt-3 text-2xl text-center ">
+        &lt; between 1 and 20 &gt;</between>
+      </p>
+      <div class="relative w-full pt-30  flex items-center justify-center">
+        <!-- Horizontal Line -->
+        <span class="absolute w-full h-2 bg-gray-300"></span>
+        <!-- Centered Box with Icon -->
+        <div
+          class="relative box-content num-box shadow-xl px-10 py-8 w-16 bg-gray-300 flex items-center justify-center">
+          <span class="text-black text-5xl number font-bold">?</span>
+        </div>
+      </div>
+    </section>
+    <section class=" pt-20  flex justify-evenly  items-center md:flex-row sm:flex-col">
+      <div class="flex flex-col justify-center items-center w-1/2 left">
+        <label for="guess" class="">
+          <input id="guess" type="number" class=" cours text-2xl mb-3 py-10 px-1 outline-none border-4 border-gray-300">
+        </label>
+        <div class="pt-10">
+          <button id="check" class="cursor-pointer text-black text-2xl font-bold bg-gray-300 py-6 px-12">Check!</button>
+        </div>
+        <div class="pt-5">
+          <button id="again" class="cursor-pointer text-black text-2xl font-bold bg-gray-300 py-4 px-8">Again</button>
+        </div>
+      </div>
+      <div class=" text-xl md:text-4xl right drop-shadow-xl w-1/2 flex justify-center items-center md:flex-col ">
+        <p class="message mb-10">Start guessing...</p>
+        <p class="label-score mb-10"> Score: <span class="score">20</span></p>
+        <p class="label-highscore">
+          Highscore: <span class="highscore">0</span>
+        </p>
+      </div>
+    </section>
+    <script src="./JS/Script.js"></script>
+  </main>
 </body>
 
 </html>

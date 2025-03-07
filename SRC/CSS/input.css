@@ -4,3 +4,7 @@
 @theme {
   --font-pixely: "Pixelify Sans";
 }
+
+.flex-Center {
+  @apply flex justify-center items-center;
+}
