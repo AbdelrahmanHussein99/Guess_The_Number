@@ -6,6 +6,7 @@ const body = document.querySelector("body");
 const numberBox = document.querySelector(".num-box");
 const again = document.querySelector("#again");
 const highScoreEle = document.querySelector(".highscore");
+const guessInput = document.querySelector("#guess");
 let score = 20;
 let highScore = 0;
 let disableFlag = true;
@@ -15,10 +16,9 @@ let secretNumber = makeRandNum();
 const changeMessageText = function (text) {
   message.textContent = text;
 };
-
-checkbtn.addEventListener("click", function () {
+const checkNumber = function () {
   if (disableFlag) {
-    const guessValue = Number(document.querySelector("#guess").value);
+    const guessValue = Number(guessInput.value);
     //when no input
     if (!guessValue) {
       changeMessageText("No Number!");
@@ -45,6 +45,9 @@ checkbtn.addEventListener("click", function () {
       scoreNumber.textContent = 0;
     }
   }
+};
+checkbtn.addEventListener("click", function () {
+  checkNumber();
 });
 
 again.addEventListener("click", function () {
@@ -59,4 +62,9 @@ again.addEventListener("click", function () {
   number.textContent = "?";
   document.querySelector("#guess").value = "";
   disableFlag = true;
+});
+guessInput.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    checkNumber();
+  }
 });
